@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Murodjon Eshnazarov | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Murodjon</div>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </button>
+
+      <!-- Nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link" href="#hero">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Dark mode toggle -->
+      <button id="darkModeToggle" class="dark-toggle" title="Toggle dark mode" aria-pressed="false">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <h2>Hello, I’m <span class="highlight">Murodjon Eshnazarov</span></h2>
+      <p class="lead">I am a Full-Stack Web Developer</p>
+
+      <div class="hero-buttons">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+
+      <!-- Social Icons under Resume button -->
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/murodjon-eshnazarov/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/MurodjonEshnazarov" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/murodjoneshnazarov/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <h2>About Me</h2>
+      <p>
+        I am a Computer Science student at the University of Cincinnati with hands-on experience
+        in web development, customer service, and leadership. I enjoy creating modern, responsive
+        applications and solving real-world problems with technology.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills-list" aria-label="Skills">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>SQL & Python</li>
+        <li>Adobe Photoshop</li>
+        <li>LabVIEW</li>
+        <li>Git & GitHub</li>
+        <li>C++</li>
+        <li>CodeSkulptor 3</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>To-Do List App</h3>
+          <p>Built with HTML, CSS, and JavaScript.</p>
+          <!-- Live Demo link (GitHub Pages) -->
+          <a class="btn small" href="https://murodjoneshnazarov.github.io/TO-DO-LIST/" target="_blank">Live</a>
+          <!-- Code link (GitHub repo) -->
+          <a class="btn small" href="https://github.com/MurodjonEshnazarov/TO-DO-LIST" target="_blank">Code</a>
+        </div>
+        
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>React app using the OpenWeather API to fetch live weather data. Search by city to see temperature, humidity, wind speed, and conditions — all with a clean, responsive UI.</p>
+          <a class="btn small" href="https://weather-app-two-omega-55.vercel.app" target="_blank">Live</a>
+          <a class="btn small" href="https://github.com/MurodjonEshnazarov/Weather-App" target="_blank">Code</a>
+        </div>
+        
+        <div class="project-card">
+          
+          <h3>Lego EV3 Robot</h3>
+          <p>Led a team of 4 to design, program, and manage robot mechanics using LabVIEW.</p>
+          <button class="btn small" id="viewLegoPhotos">View Photos</button>
+        </div>
+        <!-- Lego EV3 Photos Modal -->
+<div id="legoModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img src="robot1.png" alt="Lego EV3 Robot 1" class="modal-img">
+    <img src="robot2.png" alt="Lego EV3 Robot 2" class="modal-img">
+    <img src="robot3.png" alt="Lego EV3 Robot 1" class="modal-img">
+    <img src="robot4.png" alt="Lego EV3 Robot 2" class="modal-img">
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xwpndpzw" method="POST">
+        <input name="name" type="text" placeholder="Your Name" required />
+        <input name="email" type="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p id="formMessage" class="form-message" aria-live="polite"></p>
+    </section>
+
+    <!-- Reach Me By Section -->
+    <section id="reach" class="reach">
+      <h2>Reach Me By:</h2>
+      <div class="reach-info">
+        <p><strong>Email:</strong> eshnazmg@mail.uc.edu</p>
+        <p><strong>Phone:</strong> +1 614 515 9039</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Murodjon Eshnazarov | Built with ❤️</p>
+  </footer>
+</body>
+</html>
